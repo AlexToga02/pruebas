@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'hostname' => 'us-cdbr-azure-west-c.cloudapp.net',
+	'username' => 'bc99e432da7a1b',
+	'password' => '71d7f9e5',
+	'database' => 'mooc_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
