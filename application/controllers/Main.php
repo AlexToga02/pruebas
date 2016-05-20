@@ -37,7 +37,7 @@ class Main extends CI_Controller {
 
 
         public function register(){
-
+          $this->load->library('form_validation');
             $this->form_validation->set_rules('firstname', 'First Name', 'required');
             $this->form_validation->set_rules('lastname', 'Last Name', 'required');
             $this->form_validation>set_rules('email', 'Email', 'required|valid_email');
@@ -55,7 +55,7 @@ class Main extends CI_Controller {
                     $id = $this->user_model->insertUser($clean);
                     $token = $this->user_model->insertToken($id);
                     $qstring = base64_encode($token);
-                    $url = site_url() . 'main/complete/token/' . $qstring;
+                    $url = site_url() . '/main/complete/token/' . $qstring;
                     $link = '<a href="' . $url . '">' . $url . '</a>';
                     $message = '';
                     $message .= '<strong>You have signed up with our website</strong><br>';
