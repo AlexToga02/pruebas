@@ -37,10 +37,10 @@ class Main extends CI_Controller {
 
 
         public function register(){
-          $this->load->library('form_validation');
+
             $this->form_validation->set_rules('firstname', 'First Name', 'required');
             $this->form_validation->set_rules('lastname', 'Last Name', 'required');
-            $this->form_validation>set_rules('email', 'Email', 'required|valid_email');
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 
             if($this->form_validation->run() == FALSE){
                 $this->load->view('headertologin');
